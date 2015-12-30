@@ -1,0 +1,59 @@
+<templates>
+	<div t-name="web_ir_actions_act_window_message">
+		<t t-if="action.message_type == 'warning'">
+			<div class="alert alert-warning" role="alert">
+				<div class="row">
+					<div class="col-md-3">
+						<i class="fa fa-exclamation-circle fa-4x"></i>
+					</div>
+					<div class="col-md-9">
+						<p>
+							<strong>
+								<span t-esc="action.title"></span>
+							</strong>
+						</p>
+						<p t-esc="action.message"></p>
+					</div>
+				</div>
+			</div>
+		</t>
+		<t t-if="action.message_type == 'danger'">
+			<div class="alert alert-danger" role="alert">
+				<div class="row">
+					<div class="col-md-3">
+						<i class="fa fa-exclamation-triangle fa-4x"></i>
+					</div>
+					<div class="col-md-9">
+						<p>
+							<strong>
+								<span t-esc="action.title"></span>
+							</strong>
+						</p>
+						<p t-esc="action.message"></p>
+					</div>
+				</div>
+			</div>
+		</t>
+		<t t-if="action.message_type != 'warning' and action.message_type != 'danger'">
+			<div class="alert alert-info" role="alert">
+				<div class="row">
+					<div class="col-md-3">
+						<i class="fa fa-info-circle fa-4x"></i>
+					</div>
+					<div class="col-md-9">
+						<p>
+							<strong>
+								<span t-esc="action.title"></span>
+							</strong>
+						</p>
+						<p t-esc="action.message"></p>
+					</div>
+				</div>
+			</div>
+		</t>
+	</div>
+</templates>
+
+
+
+
